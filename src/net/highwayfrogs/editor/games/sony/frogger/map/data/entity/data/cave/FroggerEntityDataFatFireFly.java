@@ -48,7 +48,7 @@ public class FroggerEntityDataFatFireFly extends FroggerEntityDataMatrix impleme
         editor.addEnumSelector("Fly Score Type", this.flyType, FroggerFlyScoreType.values(), false, newType -> {
             this.flyType = newType;
             manager.updateEntityMesh(getParentEntity());
-        }).setTooltip(FXUtils.createTooltip("This has never been tested as anything other than SUPER_LIGHT."));
+        }).setTooltip(FXUtils.createTooltip("Changing this value will not alter the fly's appearance, but will change its collection properties.\nIntended value is SUPER_LIGHT."));
         editor.addFloatSVector("Target (Unused)", this.target, manager.getController());
     }
 }

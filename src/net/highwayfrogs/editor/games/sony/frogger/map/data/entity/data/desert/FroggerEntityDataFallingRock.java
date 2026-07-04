@@ -127,7 +127,7 @@ public class FroggerEntityDataFallingRock extends FroggerEntityDataMatrix {
             grid.addFloatVector("Bounce Target #" + (this.index + 1), this.target, null, controller,
                     (targetPos, bits) -> this.parentData.selectNewPosition(controller, targetPos, bits));
             grid.addUnsignedFixedShort("Time to Target (secs)", this.time, newTime -> this.time = newTime, getGameInstance().getFPS())
-                    .setTooltip(FXUtils.createTooltip("Controls how long it will take to reach the next boulder target from the moment Target #" + (this.index + 1) + " is reached."));
+                    .setTooltip(FXUtils.createTooltip("Controls how long it will take to reach the next boulder target from the moment Target #" + (this.index + 1) + " is reached.\nA bigger number will result in a higher bounce arc."));
         }
     }
 }

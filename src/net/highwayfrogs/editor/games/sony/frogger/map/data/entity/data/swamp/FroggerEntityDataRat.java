@@ -52,8 +52,8 @@ public class FroggerEntityDataRat extends FroggerEntityDataMatrix {
     @Override
     public void setupEditor(GUIEditorGrid editor) {
         super.setupEditor(editor);
-        editor.addFixedShort("Speed (World Units/sec)", this.speed, newSpeed -> this.speed = newSpeed, 256)
-                .setTooltip(FXUtils.createTooltip("Controls how fast the rat moves"));
+        editor.addFixedShort("Speed (grid tiles/sec)", this.speed, newSpeed -> this.speed = newSpeed, 256)
+                .setTooltip(FXUtils.createTooltip("Controls how fast the rat moves. Only affects the speed of the \"running\" phase."));
     }
 
     @Override
