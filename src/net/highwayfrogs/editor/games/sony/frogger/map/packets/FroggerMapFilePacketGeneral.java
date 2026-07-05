@@ -254,7 +254,7 @@ public class FroggerMapFilePacketGeneral extends FroggerMapFilePacket {
                         newStartRotation -> {
             this.startRotation = newStartRotation;
             manager.updatePlayerCharacter();                                                                                                                   //Commented out until I can figure out how to implement the tooltip alongside it
-        }).setTooltip(FXUtils.createTooltip("Which direction the frog(s) will face when they spawn. This does not affect the starting camera in any way."))    //.setConverter(new AbstractStringConverter<>(FroggerMapStartRotation::getArrow));
+        }).setTooltip(FXUtils.createTooltip("Which direction the frog(s) will face when they spawn. This does not affect the starting camera in any way."));    //.setConverter(new AbstractStringConverter<>(FroggerMapStartRotation::getArrow));
 
         // Add frog lighting data.
         if (hasFrogColorData()) {

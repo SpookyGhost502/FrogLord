@@ -85,7 +85,10 @@ public class FroggerEntityDataFallingRock extends FroggerEntityDataMatrix {
             this.bounceCount = newBounceCount;
             manager.updateEditor();
         }).setTooltip(FXUtils.createTooltip("Controls how many bounces the boulder will make before it breaks/resets."));
-
+        //editor.addSeparator(25);
+        editor.addBoldLabel("Note:");
+        editor.addNormalLabel("Bounce targets are projected downwards");
+        editor.addNormalLabel("to the nearest solid ground in-game.");
         // Setup the editor for the enabled bounce targets.
         for (int i = 0; i < this.bounceCount; i++)
             this.targets[i].setupEditor(editor, manager.getController());

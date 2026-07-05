@@ -63,7 +63,14 @@ public class FroggerEntityDataColorTrigger extends FroggerEntityDataMatrix {
         super.setupEditor(editor);
         editor.addEnumSelector("Action", this.type, FroggerEntityColorTriggerType.values(), false, newType -> this.type = newType)
                 .setTooltip(FXUtils.createTooltip("Controls what happens to the entities targeted by the switch when pressed."));
-
+        editor.addBoldLabel("FREEZE:");
+        editor.addNormalLabel("Pauses/unpauses all linked platforms.");
+        editor.addBoldLabel("REVERSE:");
+        editor.addNormalLabel("Swaps the direction of all linked");
+        editor.addNormalLabel("platforms. Works on paused ones as well.");
+        editor.addBoldLabel("FREEZE_UNUSED_DUPLICATE:");
+        editor.addNormalLabel("Exactly what it sounds like.");
+        editor.addNormalLabel("Internally named \"START\"");
         ComboBox<?> colorField = editor.addEnumSelector("Color (PSX Only)", this.color, VolcanoTriggerColor.values(), false, newColor -> this.color = newColor);
         colorField.setTooltip(FXUtils.createTooltip("Sets the color of the switch. Only RED/GREEN is used in the vanilla game.\nThe 8 unused variants toggle from a \"dark\" to a \"lit\" state when pressed, except Orange, which has 2 \"dark\" textures.\nThe white switch has a glitchy \"lit\" texture."));
         if (getGameInstance().isPC())

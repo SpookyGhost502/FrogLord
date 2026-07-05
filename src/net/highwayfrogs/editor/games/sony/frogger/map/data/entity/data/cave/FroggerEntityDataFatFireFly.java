@@ -49,6 +49,12 @@ public class FroggerEntityDataFatFireFly extends FroggerEntityDataMatrix impleme
             this.flyType = newType;
             manager.updateEntityMesh(getParentEntity());
         }).setTooltip(FXUtils.createTooltip("Changing this value will not alter the fly's appearance, but will change its collection properties.\nIntended value is SUPER_LIGHT."));
+        editor.addSeparator(25);
         editor.addFloatSVector("Target (Unused)", this.target, manager.getController());
+        editor.addNormalLabel("Leftover of a scrapped feature that");
+        editor.addNormalLabel("would pan the camera to this location.");
+        editor.addNormalLabel("Can be reimplemented using the source");
+        editor.addNormalLabel("code, but is prone to breaking the");
+        editor.addNormalLabel("cave light.");
     }
 }

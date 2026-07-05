@@ -52,6 +52,9 @@ public class FroggerEntityDataSquirt extends FroggerEntityDataMatrix {
     @Override
     public void setupEditor(GUIEditorGrid editor, FroggerUIMapEntityManager manager) {
         super.setupEditor(editor, manager);
+        editor.addSeparator(25);
+        editor.addNormalLabel("The position the squirt will travel to.");
+        editor.addNormalLabel("It will reset once it reaches this spot.");
         editor.addFloatVector("Target", this.target, null, manager.getController(),
                 (targetPos, bits) -> selectNewPosition(manager.getController(), targetPos, bits));
     }

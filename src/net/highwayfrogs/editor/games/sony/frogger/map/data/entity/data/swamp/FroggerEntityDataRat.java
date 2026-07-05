@@ -59,13 +59,20 @@ public class FroggerEntityDataRat extends FroggerEntityDataMatrix {
     @Override
     public void setupEditor(GUIEditorGrid editor, FroggerUIMapEntityManager manager) {
         super.setupEditor(editor, manager);
+        editor.addSeparator(25);
+        editor.addNormalLabel("Where the rat will begin its first jump.");
         editor.addFloatVector("Start Target", this.startTarget, null, manager.getController(),
                 (targetPos, bits) -> selectNewPosition(manager.getController(), targetPos, bits));
+        editor.addNormalLabel("Where the rat's first jump will land.");
+        editor.addNormalLabel("The rat will stop and roll here.");
         editor.addFloatVector("Start Run Target", this.startRunTarget, null, manager.getController(),
                 (targetPos, bits) -> selectNewPosition(manager.getController(), targetPos, bits));
+        editor.addNormalLabel("Where the rat will run to after it recovers.");
         editor.addFloatVector("End Run Target", this.endRunTarget, null, manager.getController(),
                 (targetPos, bits) -> selectNewPosition(manager.getController(), targetPos, bits));
+        editor.addNormalLabel("Where the rat will jump to after running.");
         editor.addFloatVector("End Target", this.endTarget, null, manager.getController(),
                 (targetPos, bits) -> selectNewPosition(manager.getController(), targetPos, bits));
+
     }
 }
